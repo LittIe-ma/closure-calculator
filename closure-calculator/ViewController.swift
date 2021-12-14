@@ -19,21 +19,10 @@ class ViewController: UIViewController {
         }
     }
 
-    let addClosure = { (num1: Double, num2: Double) -> Double in
-        num1 + num2
-    }
-
-    let sumClosure = { (num1: Double, num2: Double) -> Double in
-        num1 - num2
-    }
-
-    let mulClosure = { (num1: Double, num2: Double) -> Double in
-        num1 * num2
-    }
-
-    let divClosure = { (num1: Double, num2: Double) -> Double in
-        num1 / num2
-    }
+    let addClosure: (Double, Double) -> Double = { $0 + $1 }
+    let sumClosure: (Double, Double) -> Double = { $0 - $1 }
+    let mulClosure: (Double, Double) -> Double = { $0 * $1 }
+    let divClosure: (Double, Double) -> Double = { $0 / $1 }
 
     @objc private func didTapCalculateButton() {
         let num1 = Double(textField1.text!) ?? 0.0
